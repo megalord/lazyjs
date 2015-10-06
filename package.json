@@ -1,0 +1,23 @@
+{
+  "name": "lazyjs",
+  "version": "0.1.0",
+  "description": "lazy array manipulation for javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/megalord/lazyjs.git"
+  },
+  "keywords": [
+    "lazy",
+    "array"
+  ],
+  "author": "megalord",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/megalord/lazyjs/issues"
+  },
+  "homepage": "https://github.com/megalord/lazyjs#readme"
+}
