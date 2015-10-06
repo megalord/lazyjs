@@ -84,7 +84,9 @@ function lazy (input, builder) {
   function every (fn) {
     interface.filter(fn);
     var i = 0;
-    while (i < input.length && reduceOps(i++) !== EXCLUDE) {}
+    while (i < input.length && reduceOps(i) !== EXCLUDE) {
+      i++;
+    }
     return i === input.length;
   }
 
@@ -95,7 +97,9 @@ function lazy (input, builder) {
   function last () {
     var result;
     var i = 0;
-    while (i < input.length && (result = reduceOps(i++)) !== EXCLUDE) {}
+    while (i < input.length && (result = reduceOps(i++)) !== EXCLUDE) {
+      i++;
+    }
     return i === input.length ? undefined : result;
   }
 
@@ -132,7 +136,7 @@ function lazy (input, builder) {
     var numDesiredResults = (end || input.length) - start;
     var results = [];
     var result;
-    var i = 0;
+    var i = start;
     while (results.length < numDesiredResults && i < input.length) {
       result = reduceOps(i++);
       if (result !== EXCLUDE) {
